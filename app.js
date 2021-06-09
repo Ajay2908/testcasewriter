@@ -12,7 +12,7 @@ app.post('/', (req, res) => {
     final_list = [];
     for (test_cases of tests) {
         const obj = {
-            correct_answers: [test_cases['output']],
+            correct_answers: [test_cases['output'].slice(0, -1)],
             test: test_cases['input']
         }
         final_list.push(obj);
